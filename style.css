@@ -30,5 +30,7 @@ footer {
 }
 
 button {
+    display: block;
     align-items: right;
+    width: 100%;
 }
