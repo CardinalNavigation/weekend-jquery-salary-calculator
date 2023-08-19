@@ -5,7 +5,7 @@ function onReady() {
 
     // Listeners
     $('#submitButton').on('click', pushTheInput);
-    $('#tableBody').on('click', '#tableRow', clearRow);
+    $('#tableBody').on('click', '#tableRow', deleteButton);
 
 }
 
@@ -24,7 +24,6 @@ function pushTheInput(event) {
 
 //trying to delete the items but its deleting the first in the line
 // i dont know why
-function clearRow() {
-    console.log
-    $('#tableRow').remove();
+function deleteButton() {
+    $(this).remove();
 }

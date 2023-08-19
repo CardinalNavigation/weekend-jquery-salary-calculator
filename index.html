@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salary Calculator 🧮</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
     <script src="script.js"></script>
@@ -19,15 +19,15 @@
         <section class="inputBoxes">
             <input id="firstName" placeholder="First Name" type="text">
             <input id="lastName" placeholder="Last Name" type="text">
-            <input id="idLabel" placeholder="ID" type="text">
+            <input id="idLabel" placeholder="ID" type="number">
             <input id="titleLabel" placeholder="Title" type="text">
-            <input id="salaryLabel" placeholder="Annual Salary" type="text">
+            <input id="salaryLabel" placeholder="Annual Salary" type="number">
         </section>
         <section>
             <button id="submitButton">Submit</button>
         </section>
         <section>
-            <h3>Employees</h3>
+            <h3 id="addEmployee">Employees</h3>
             <table>
                 <thead>
                     <tr>
