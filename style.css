@@ -7,6 +7,10 @@ header {
     height: 50px;
 }
 
+h1 {
+    background-color: grey;
+}
+
 /* For our Table */
 table {
     border-style: solid;
@@ -30,15 +34,21 @@ footer {
     background-color: grey;
 }
 
-button {
-    display: grid;
-    margin: auto;
+#submit-button-section {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-right: 1.75em;
+
 }
 
 .inputBoxes {
-    display: grid;
-    margin: auto;
-    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-block: auto;
+    padding-top: 18.72px;
+    padding-bottom: 18.72px;
 }
 
 #addEmployee {
