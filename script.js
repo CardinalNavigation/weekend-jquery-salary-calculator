@@ -19,7 +19,9 @@ function pushTheInput(event) {
     let idLabel = $('#idLabel').val();
     let titleLabel = $('#titleLabel').val();
     let salaryLabel = $('#salaryLabel').val();
+    let salaryLabelChange = salaryLabel + $('#salaryLabel').val();
     $('#tableBody').append(`<tr id="tableRow"><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryLabel}</td><<td><button class "deleteButton">Delete</button></td>/tr>`)
+    $('#totalMonthlyInput').append(salaryLabelChange);
 }
 
 //trying to delete the items but its deleting the first in the line

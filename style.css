@@ -27,11 +27,13 @@ th {
 
 /* footer settings */
 footer {
-    display: block;
-    text-align: right;
+    display: flex;
     text-size-adjust: 20px;
     color: white;
     background-color: grey;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 #submit-button-section {
