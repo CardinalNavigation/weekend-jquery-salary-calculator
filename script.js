@@ -5,6 +5,7 @@ function onReady() {
 
     // Listeners
     $('#submitButton').on('click', pushTheInput)
+    $('#')
 
 }
 
@@ -14,6 +15,9 @@ function pushTheInput(event) {
     console.log('is it working');
     //Set Values To Each Box so we can push
     let firstName = $('#firstName').val();
-    let lasName = $('#lastName').val();
-    $('#tableBody').append(`<tr><td>${firstName}</td><td>hi</td><td>hi</td><td>hi</td><td>hi</td><<td><button class "deleteButton">Delete</button></td>/tr>`)
+    let lastName = $('#lastName').val();
+    let idLabel = $('#idLabel').val();
+    let titleLabel = $('#titleLabel').val();
+    let salaryLabel = $('#salaryLabel').val();
+    $('#tableBody').append(`<tr><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryLabel}</td><<td><button class "deleteButton">Delete</button></td>/tr>`)
 }

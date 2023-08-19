@@ -11,6 +11,7 @@ header {
 table {
     border-style: solid;
     border-color: black;
+    width: 100%;
 }
 
 th {
@@ -30,7 +31,16 @@ footer {
 }
 
 button {
-    display: block;
-    align-items: right;
-    width: 100%;
+    display: grid;
+    margin: auto;
+}
+
+.inputBoxes {
+    display: grid;
+    margin: auto;
+    max-width: 50%;
+}
+
+#addEmployee {
+    text-align: center;
 }
