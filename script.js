@@ -5,7 +5,7 @@ function onReady() {
 
     // Listeners
     $('#submitButton').on('click', pushTheInput);
-    $('#tableBody').on('click', '#tableRow', deleteButton);
+    $('#tableBody').on('click', '#deleteButton', removeRow);
 
 }
 
@@ -19,30 +19,40 @@ function pushTheInput(event) {
     let idLabel = $('#idLabel').val();
     let titleLabel = $('#titleLabel').val();
 
-
     // Figuring out how to get the monthly total to update
     // It seems to me that you should be able to push the value of the input into
     // another container but the problem i am having is that it is turnign it into 
     // a string.
 
-    let salaryInputString = $('#salaryLabel').val();
-    // let variable = $('target').operation();
-    // WRITE (replace)updated target monthly = read input + read target monthly 
-    let monthlyTotal = $('#totalMonthlyInput').val();
-
-    let salaryInput = Number(salaryInputString);
-    console.log(typeof salaryInput)
-
-
-    $('#totalMonthlyInput').append(salaryInput);
+    // finalMonthly.toLocaleString() //TODO STRETCH: $10,000.00
+    let salaryInput = Number($('#salaryLabel').val());
+    let monthlyStatus = Number($('#totalMonthlyInput').text());
+    let finalMonthly = (salaryInput / 12) + monthlyStatus;
+    finalMonthly = finalMonthly.toFixed(2);
+    $('#totalMonthlyInput').text(finalMonthly)
 
 
-    $('#tableBody').append(`<tr id="tableRow"><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryInputString}</td><<td><button class "deleteButton">Delete</button></td>/tr>`)
 
+    //Table Row Function
+    $('#tableBody').append(`<tr id="tableRow"><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryInput}</td><<td><button id="deleteButton">Delete</button></td>/tr>`)
+
+    // Reset the Value to blank
+    $('#firstName').val("");
+    $('#lastName').val("");
+    $('#idLabel').val("");
+    $('#titleLabel').val("");
+    $('#salaryLabel').val("");
 }
 
-//trying to delete the items but its deleting the first in the line
-// i dont know why
-function deleteButton() {
-    $(this).remove();
+//Function for Delete Items
+// Problem Solving:
+// $('#tableBody').on('click', git add .'#tableRow', deleteButton); Listener
+// Updating delete button from class to ID, the class was not set up properly
+// $$('#tableBody').on('click', '#deleteButton', deleteButton); Listener updated to correct text
+// --We want the button to be what clears the row
+// now set up a function, that reads "When the delete button is clicked, remove the same row"
+
+
+function removeRow(event) {
+    $('#tableRow').remove();
 }
