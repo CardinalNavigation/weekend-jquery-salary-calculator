@@ -31,13 +31,14 @@ function pushTheInput(event) {
     finalMonthly = finalMonthly.toFixed(2);
     $('#totalMonthlyInput').text(finalMonthly)
 
-    // if (finalMonthly > 20000){
-    // $('#totalMonthlyInput').css(background)
-    // }
+    if (finalMonthly > 20000) {
+        $('#totalMonthlyInput').css('background-color', "#F55050")
+        $('#totalMonthlyInputText').css('background-color', "#F55050")
+    }
 
 
     //Table Row Function
-    $('#tableBody').append(`<tr><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryInput}</td><<td><button id="deleteButton">Delete</button></td>/tr>`)
+    $('#tableBody').append(`<tr><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>$${salaryInput}</td><<td><button id="deleteButton">Delete</button></td>/tr>`)
 
     // Reset the Value to blank
     $('#firstName').val("");
