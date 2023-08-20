@@ -31,10 +31,13 @@ function pushTheInput(event) {
     finalMonthly = finalMonthly.toFixed(2);
     $('#totalMonthlyInput').text(finalMonthly)
 
+    // if (finalMonthly > 20000){
+    // $('#totalMonthlyInput').css(background)
+    // }
 
 
     //Table Row Function
-    $('#tableBody').append(`<tr id="tableRow"><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryInput}</td><<td><button id="deleteButton">Delete</button></td>/tr>`)
+    $('#tableBody').append(`<tr><td>${firstName}</td><td>${lastName}</td><td>${idLabel}</td><td>${titleLabel}</td><td>${salaryInput}</td><<td><button id="deleteButton">Delete</button></td>/tr>`)
 
     // Reset the Value to blank
     $('#firstName').val("");
@@ -51,8 +54,12 @@ function pushTheInput(event) {
 // $$('#tableBody').on('click', '#deleteButton', deleteButton); Listener updated to correct text
 // --We want the button to be what clears the row
 // now set up a function, that reads "When the delete button is clicked, remove the same row"
+// trying class?
 
 
-function removeRow(event) {
-    $('#tableRow').remove();
+// $( "li.item-2" ).parentsUntil( $( "ul.level-1" ), ".yes" )
+
+function removeRow() {
+    // $(this).parentsUntil($('tr')).remove();
+    $(this).parent().parent().remove();
 }
