@@ -7,14 +7,25 @@ header {
     height: 50px;
 }
 
+body {
+    padding: 0px;
+    margin: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
     background-color: grey;
+    margin: 0;
 }
 
 /* For our Table */
 table {
     border-style: solid;
     border-color: black;
+    border-collapse: collapse;
     width: 100%;
 }
 
@@ -28,7 +39,7 @@ th {
 /* footer settings */
 footer {
     display: flex;
-    text-size-adjust: 20px;
+    font-size: 20px;
     color: white;
     background-color: grey;
     flex-direction: row;
@@ -42,6 +53,10 @@ footer {
     flex-wrap: wrap;
     padding-right: 1.75em;
 
+}
+
+.aboveInputBoxes {
+    height: 21.5px;
 }
 
 .inputBoxes {
